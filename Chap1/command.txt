@@ -1,3 +1,5 @@
 mix new cards
 
 iex -S mix
+
+recomplie
