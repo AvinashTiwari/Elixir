@@ -3,3 +3,5 @@ mix new cards
 iex -S mix
 
 recomplie
+
+mix deps.get
