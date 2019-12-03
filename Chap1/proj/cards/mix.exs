@@ -1,4 +1,8 @@
 defmodule Cards.MixProject do
+  @moduledoc """
+    proivdes the method and handling deck of cards
+  """
+
   use Mix.Project
 
   def project do

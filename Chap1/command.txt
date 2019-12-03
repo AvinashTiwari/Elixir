@@ -5,3 +5,5 @@ iex -S mix
 recomplie
 
 mix deps.get
+
+mix docs
