@@ -7,3 +7,5 @@ recomplie
 mix deps.get
 
 mix docs
+
+mix test
