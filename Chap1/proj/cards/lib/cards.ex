@@ -22,7 +22,7 @@ defmodule Cards do
 
 
             iex> deck = Cards.create_deck
-            iex> Cards.contains?(deck,"Ace Of Spades")
+            iex> Cards.contains?(deck,"Ace of Spades")
             true
 
 
