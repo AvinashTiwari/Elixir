@@ -11,9 +11,9 @@ config :discuss, Discuss.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../", __DIR__)]]
-
+  watchers: [
+    node: ["node_modules/brunch/bin/brunch", "watch", "--stdin", cd: Path.expand("../", __DIR__)]
+  ]
 
 # Watch static and templates for browser reloading.
 config :discuss, Discuss.Endpoint,
@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :discuss, Discuss.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "discuss_dev",
+  username: "avinash.tiwari",
+  password: "9967541245",
+  database: "discuss",
   hostname: "localhost",
   pool_size: 10
