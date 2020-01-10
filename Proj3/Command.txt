@@ -1,2 +1,5 @@
 mix ecto.create
 mix phoenix.server
+
+mix ecto.gen.migration add_topics
+mix ecto.migrate
