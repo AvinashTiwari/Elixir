@@ -13,6 +13,7 @@
                         'Elixir.Discuss.PageView','Elixir.Discuss.Repo',
                         'Elixir.Discuss.Router',
                         'Elixir.Discuss.Router.Helpers',
+                        'Elixir.Discuss.TopicController',
                         'Elixir.Discuss.UserSocket','Elixir.Discuss.Web']},
               {registered,[]},
               {vsn,"0.0.1"},
