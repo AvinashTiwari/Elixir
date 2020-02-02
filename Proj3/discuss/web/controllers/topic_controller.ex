@@ -3,6 +3,7 @@ defmodule Discuss.TopicController do
   alias Discuss.Topic
 
   def index(conn, _param) do
+    topics = Repo.all(Topic)
   end
 
   def new(conn, _params) do
