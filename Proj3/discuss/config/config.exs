@@ -25,6 +25,10 @@ config :logger, :console,
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
 
-config(:ueberauth, Ueberauth, providers:[github: { Ueberauth.Strategy.Github, []}])
+config(:ueberauth, Ueberauth,
+  providers: [github: {Ueberauth.Strategy.Github, [default_scope: "user,public_repo"]}]
+)
 
-config :ueberauth, Ueberauth.Strategy.Github.Oauth, client_id: "", client_secret: ""
+config :ueberauth, Ueberauth.Strategy.Github.OAuth,
+  client_id: "",
+  client_secret: ""
