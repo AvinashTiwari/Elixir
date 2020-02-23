@@ -16,7 +16,7 @@
                         'Elixir.Discuss.Router.Helpers',
                         'Elixir.Discuss.Topic',
                         'Elixir.Discuss.TopicController',
-                        'Elixir.Discuss.TopicView',
+                        'Elixir.Discuss.TopicView','Elixir.Discuss.User',
                         'Elixir.Discuss.UserSocket','Elixir.Discuss.Web']},
               {registered,[]},
               {vsn,"0.0.1"},
