@@ -10,6 +10,21 @@ defmodule Discuss.AuthController do
     insert_or_update_user(changeSet)
   end
 
+  defp signin(conn, changeset) do
+    case insert_or_update_user(changeset) do
+      {:ok, user} ->
+        conn
+        |> put_flash(:info, "Welcome Back")
+        |> put_session(:user_id, user.id)
+        |> redirect(to: topic_path(conn, :index))
+
+      {:error, _reason} ->
+        conn
+        |> put_flash(:error, "Error Signing In")
+        |> redirect(to: topic_path(conn, :index))
+    end
+  end
+
   defp insert_or_update_user(changeset) do
     case Repo.get_by(User, email: changeset.changes.email) do
       nil -> Repo.insert(changeset)
