@@ -7,7 +7,8 @@ defmodule Discuss.AuthController do
     IO.inspect(auth)
     user_param = %{token: auth.credentials.token, email: auth.info.email, provider: "github"}
     changeSet = User.changeset(%User{}, user_param)
-    insert_or_update_user(changeSet)
+    # insert_or_update_user(changeSet)
+    signin(conn, changeSet)
   end
 
   defp signin(conn, changeset) do
