@@ -15,7 +15,12 @@ defmodule Discuss.TopicController do
 
   @spec create(Plug.Conn.t(), map) :: Plug.Conn.t()
   def create(conn, %{"topic" => topic}) do
-    changeset = Topic.changeset(%Topic{}, topic)
+    #  changeset = Topic.changeset(%Topic{}, topic)
+
+    changeset =
+      conn.assign.user
+      |> build_assoc(:topics)
+      |> Topic.changeset(topic)
 
     case Repo.insert(changeset) do
       {:ok, _topic} ->
