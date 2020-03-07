@@ -1,6 +1,7 @@
 defmodule Discuss.TopicController do
   use Discuss.Web, :controller
   alias Discuss.Topic
+
   plug(Discuss.Plugs.RequireAuth when action in [:new, :create, :edit, :update, :delte])
 
   def index(conn, _param) do
@@ -18,7 +19,7 @@ defmodule Discuss.TopicController do
     #  changeset = Topic.changeset(%Topic{}, topic)
 
     changeset =
-      conn.assign.user
+      conn.assigns.user
       |> build_assoc(:topics)
       |> Topic.changeset(topic)
 
